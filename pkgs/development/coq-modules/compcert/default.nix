@@ -61,7 +61,7 @@ compcert = mkCoqDerivation {
   '';
 
   configurePhase = ''
-    ./configure -clightgen \
+    ./configure -clightgen -ignore-coq-version \
     -prefix $out \
     -coqdevdir $lib/lib/coq/${coq.coq-version}/user-contrib/compcert/ \
     -toolprefix ${tools}/bin/ \
